@@ -2,33 +2,41 @@ package org.lesson.java.ciclabile;
 
 public class Ciclabile {
 
-    private int[] numeri = { 1, 2, 3, 4, 5 };
+    private int[] numeri;
     private int richiesta = 0;
 
-    // public Ciclabile(int[] numeri) {
-    // this.numeri = numeri;
-    // }
+    public Ciclabile(int[] numeri) {
+        this.numeri = numeri;
+    }
+
+    public Ciclabile() {
+        this.numeri = new int[0];
+    }
 
     public int getElementoSuccessivo() {
-        for (int i = 0; i < numeri.length; i++) {
+        // for (int i = 0; i < numeri.length; i++) {
 
-            if (i == this.richiesta) {
-                this.richiesta = richiesta + 1;
-                return this.numeri[i];
-            }
+        // if (i == this.richiesta) {
+        // this.richiesta = richiesta + 1;
+        // return this.numeri[i];
+        // }
+        // }
+        // return -1;
+
+        if (hasAncoraElementi()) {
+            richiesta++;
+            return numeri[richiesta - 1];
         }
         return -1;
-        // richiesta++;
-        // return numeri[richiesta - 1];
     }
 
     public boolean hasAncoraElementi() {
-
-        if ((richiesta + 1) <= this.numeri.length) {
-            return true;
-        } else {
-            return false;
-        }
+        return ((richiesta + 1) <= this.numeri.length);
+        // if ((richiesta + 1) <= this.numeri.length) {
+        // return true;
+        // } else {
+        // return false;
+        // }
     }
 
     public void addElemento(int nummeroDaAggiungere) {

@@ -3,7 +3,7 @@ package org.lesson.java.ciclabile;
 public class Main {
     public static void main(String[] args) {
 
-        Ciclabile provaCiclabile = new Ciclabile();
+        Ciclabile provaCiclabile = new Ciclabile(new int[] { 1, 2, 34, 5, 6 });
 
         System.out.println(provaCiclabile.getElementoSuccessivo());
         System.out.println(provaCiclabile.hasAncoraElementi());
@@ -24,6 +24,14 @@ public class Main {
         System.out.println(provaCiclabile.hasAncoraElementi());
         System.out.println(provaCiclabile.getElementoSuccessivo());
         System.out.println(provaCiclabile.hasAncoraElementi());
+
+        Ciclabile provaCiclabile2 = new Ciclabile();
+        provaCiclabile2.addElemento(2);
+        provaCiclabile2.addElemento(3);
+        System.out.println(provaCiclabile2.getElementoSuccessivo());
+        System.out.println(provaCiclabile2.hasAncoraElementi());
+        System.out.println(provaCiclabile2.getElementoSuccessivo());
+        System.out.println(provaCiclabile2.hasAncoraElementi());
 
     }
 
