@@ -17,7 +17,6 @@ public class Ciclabile {
                 return this.numeri[i];
             }
         }
-        this.richiesta = richiesta + 1;
         return -1;
         // richiesta++;
         // return numeri[richiesta - 1];
@@ -30,6 +29,17 @@ public class Ciclabile {
         } else {
             return false;
         }
+    }
+
+    public void addElemento(int nummeroDaAggiungere) {
+        int[] numeriConAggiunta = new int[numeri.length + 1];
+        for (int i = 0; i < numeri.length; i++) {
+            numeriConAggiunta[i] = numeri[i];
+        }
+        numeriConAggiunta[numeriConAggiunta.length - 1] = nummeroDaAggiungere;
+
+        numeri = numeriConAggiunta;
+
     }
 
 }
